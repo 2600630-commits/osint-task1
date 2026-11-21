@@ -1,0 +1,327 @@
+{
+  "target": {
+    "domain": "wikipedia.org",
+    "ip": "208.80.153.224",
+    "all_ips": [
+      "208.80.153.224"
+    ],
+    "resolve_error": ""
+  },
+  "query_window": {
+    "started_at": "2026-11-21T16:49:46Z",
+    "finished_at": "2026-11-21T16:49:46Z"
+  },
+  "meta": {
+    "mode": "demo (captured fixtures, no live API calls)",
+    "tool_count": 5,
+    "keys_available": [],
+    "keys_missing": [],
+    "key_sources": {
+      "virustotal": "demo",
+      "securitytrails": "demo",
+      "abuseipdb": "demo",
+      "shodan": "demo",
+      "ipinfo": "demo"
+    }
+  },
+  "reports": [
+    {
+      "tool": "virustotal",
+      "label": "VirusTotal",
+      "status": "ok",
+      "latency_ms": 0,
+      "endpoint": "https://www.virustotal.com/api/v3/domains/wikipedia.org",
+      "checked_at": "2026-11-21T16:49:46Z",
+      "metrics": {
+        "Verdict": "suspicious",
+        "Malicious / engines": "0 / 95",
+        "Suspicious engines": 1,
+        "Community votes": "+118 / -3",
+        "Categories": "reference",
+        "Registrar": "MarkMonitor Inc.",
+        "IP malicious / engines": "0 / 75"
+      },
+      "error": "",
+      "raw": {
+        "domain": {
+          "last_analysis_stats": {
+            "harmless": 72,
+            "malicious": 0,
+            "suspicious": 1,
+            "undetected": 22,
+            "timeout": 0
+          },
+          "last_analysis_date": 1763712000,
+          "reputation": 412,
+          "total_votes": {
+            "harmless": 118,
+            "malicious": 3
+          },
+          "categories": {
+            "BitDefender": "reference",
+            "Comodo Valkeu": "reference",
+            "Forcepoint ThreatSeeker": "reference"
+          },
+          "registrar": "MarkMonitor Inc.",
+          "creation_date": 979488000,
+          "popularity_ranks": {
+            "Alexa": {
+              "rank": 12,
+              "timestamp": 1763712000
+            }
+          },
+          "id": "wikipedia.org",
+          "type": "domain"
+        },
+        "ip": {
+          "last_analysis_stats": {
+            "harmless": 61,
+            "malicious": 0,
+            "suspicious": 0,
+            "undetected": 14
+          },
+          "reputation": 88,
+          "total_votes": {
+            "harmless": 40,
+            "malicious": 0
+          },
+          "id": "208.80.153.224",
+          "type": "ip_address"
+        }
+      }
+    },
+    {
+      "tool": "securitytrails",
+      "label": "SecurityTrails",
+      "status": "ok",
+      "latency_ms": 0,
+      "endpoint": "https://api.securitytrails.com/v1/domain/wikipedia.org",
+      "checked_at": "2026-11-21T16:49:46Z",
+      "metrics": {
+        "Verdict": "registered domain",
+        "A records": 3,
+        "A record IPs": "208.80.153.224, 208.80.154.224, 198.35.26.96",
+        "MX hosts": 2,
+        "NS hosts": "ns0.wikimedia.org, ns1.wikimedia.org, ns2.wikimedia.org",
+        "WHOIS registrant": "Wikimedia Foundation, Inc.",
+        "Registry created": "2001-01-13",
+        "Alexa rank": 12,
+        "Subdomains found": 20,
+        "A-record history entries": 3
+      },
+      "error": "",
+      "raw": {
+        "subdomain_sample": [
+          "en",
+          "de",
+          "fr",
+          "es",
+          "ja",
+          "ru",
+          "zh",
+          "www",
+          "commons",
+          "meta",
+          "api",
+          "upload",
+          "stats",
+          "donate",
+          "foundation",
+          "shop",
+          "mail",
+          "lists",
+          "gerrit",
+          "phabricator"
+        ],
+        "domain": {
+          "current_dns": {
+            "a": [
+              {
+                "ip": "208.80.153.224",
+                "ipv": 4
+              },
+              {
+                "ip": "208.80.154.224",
+                "ipv": 4
+              },
+              {
+                "ip": "198.35.26.96",
+                "ipv": 4
+              }
+            ],
+            "mx": [
+              {
+                "hostname": "mx1001.wikimedia.org",
+                "priority": 10
+              },
+              {
+                "hostname": "mx2001.wikimedia.org",
+                "priority": 50
+              }
+            ],
+            "ns": [
+              {
+                "hostname": "ns0.wikimedia.org"
+              },
+              {
+                "hostname": "ns1.wikimedia.org"
+              },
+              {
+                "hostname": "ns2.wikimedia.org"
+              }
+            ],
+            "txt": [
+              {
+                "value": "v=spf1 include:_spf.wikimedia.org ~all"
+              }
+            ]
+          },
+          "whois": {
+            "createdDate": "2001-01-13",
+            "expiresDate": "2027-01-13",
+            "updatedDate": "2026-01-12",
+            "registrant": {
+              "org": "Wikimedia Foundation, Inc.",
+              "country": "US"
+            },
+            "registrarName": "MarkMonitor Inc.",
+            "status": [
+              "clientDeleteProhibited",
+              "clientTransferProhibited"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "tool": "abuseipdb",
+      "label": "AbuseIPDB",
+      "status": "ok",
+      "latency_ms": 0,
+      "endpoint": "https://api.abuseipdb.com/api/v2/check?ipAddress=208.80.153.224",
+      "checked_at": "2026-11-21T16:49:46Z",
+      "metrics": {
+        "Verdict": "no reports",
+        "Abuse confidence": "0%",
+        "Reports (90 d)": 0,
+        "Distinct reporters": 0,
+        "Last reported": "-",
+        "Usage type": "Data Center/Web Hosting/Transit",
+        "ISP": "Wikimedia Foundation Inc.",
+        "Country": "US",
+        "Whitelisted": true
+      },
+      "error": "",
+      "raw": {
+        "ip": "208.80.153.224",
+        "categories_sample": [],
+        "data": {
+          "ipAddress": "208.80.153.224",
+          "isPublic": true,
+          "ipVersion": 4,
+          "isWhitelisted": true,
+          "abuseConfidenceScore": 0,
+          "countryCode": "US",
+          "usageType": "Data Center/Web Hosting/Transit",
+          "isp": "Wikimedia Foundation Inc.",
+          "domain": "wikipedia.org",
+          "hostnames": [
+            "text-lb.codfw.wikimedia.org"
+          ],
+          "totalReports": 0,
+          "numDistinctUsers": 0,
+          "lastReportedAt": null
+        }
+      }
+    },
+    {
+      "tool": "shodan",
+      "label": "Shodan",
+      "status": "ok",
+      "latency_ms": 0,
+      "endpoint": "https://api.shodan.io/shodan/host/208.80.153.224",
+      "checked_at": "2026-11-21T16:49:46Z",
+      "metrics": {
+        "Verdict": "internet-facing host",
+        "Open ports": 2,
+        "Port list": "80, 443",
+        "Organisation": "Wikimedia Foundation Inc.",
+        "ASN": "AS14907",
+        "Hostnames": "text-lb.codfw.wikimedia.org, wikipedia.org",
+        "Products": "nginx 1.25.3",
+        "CVEs": 0,
+        "TLS services": 1,
+        "Last scan": "2026-11-19T10:34:37"
+      },
+      "error": "",
+      "raw": {
+        "ip": "208.80.153.224",
+        "ports": [
+          80,
+          443
+        ],
+        "products": [
+          "nginx 1.25.3"
+        ],
+        "vulns": [],
+        "services": [
+          {
+            "port": 80,
+            "transport": "tcp",
+            "product": "nginx",
+            "version": "1.25.3",
+            "banner": "HTTP/1.1 301 Moved Permanently\r\nServer: nginx\r\nLocation: https://wikipedia.org/\r\n"
+          },
+          {
+            "port": 443,
+            "transport": "tcp",
+            "product": "nginx",
+            "version": "1.25.3",
+            "banner": "HTTP/1.1 200 OK\r\nServer: nginx\r\nContent-Type: text/html\r\n"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "ipinfo",
+      "label": "IPinfo",
+      "status": "ok",
+      "latency_ms": 0,
+      "endpoint": "https://ipinfo.io/208.80.153.224/json",
+      "checked_at": "2026-11-21T16:49:46Z",
+      "metrics": {
+        "Verdict": "geolocated",
+        "Hostname": "text-lb.codfw.wikimedia.org",
+        "City / region": "Carrollton / Texas",
+        "Country": "US",
+        "Coordinates": "32.9537,-96.8903",
+        "ASN / org": "AS14907 Wikimedia Foundation Inc.",
+        "Timezone": "America/Chicago",
+        "Postal": "75006",
+        "Anycast": false
+      },
+      "error": "",
+      "raw": {
+        "ip": "208.80.153.224",
+        "location": {
+          "lat": "32.9537",
+          "lon": "-96.8903"
+        },
+        "org": "AS14907 Wikimedia Foundation Inc.",
+        "hostname": "text-lb.codfw.wikimedia.org",
+        "raw_keys": [
+          "city",
+          "country",
+          "hostname",
+          "ip",
+          "loc",
+          "org",
+          "postal",
+          "readme",
+          "region",
+          "timezone"
+        ]
+      }
+    }
+  ]
+}

@@ -8,6 +8,9 @@ output/
 *.xlsx
 *.json
 !requirements.json
+# ...except the demo sample shipped for reviewers (fixtures, not live data)
+!docs/samples/*.xlsx
+!docs/samples/*.json
 
 # Python
 __pycache__/
