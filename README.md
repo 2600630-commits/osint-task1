@@ -138,6 +138,9 @@ osint-5tool-compare/
 │       ├── virustotal.py  ├── securitytrails.py  ├── abuseipdb.py
 │       ├── shodan.py      ├── ipinfo.py          └── _common.py
 ├── tests/test_osint_compare.py   # 17 offline tests
+├── docs/
+│   ├── ASSIGNMENT_REPORT.md      # write-up skeleton (results section = live run)
+│   └── samples/                  # demo workbook shipped for reviewers
 └── output/                       # generated workbooks (git-ignored)
 ```
 
@@ -149,6 +152,9 @@ without keys or API quota. Demo rows are labelled
 `Run mode: demo (captured fixtures, no live API calls)` in the Summary sheet and
 the console prints `DEMO` — they must never be presented as live findings.
 Run the real thing with your own keys by omitting `--demo`.
+
+A demo workbook is committed at `docs/samples/demo_wikipedia_comparison.xlsx`
+so the expected output format can be inspected without running anything.
 
 ## 7. Ethics and limits
 
