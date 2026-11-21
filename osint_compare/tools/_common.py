@@ -12,7 +12,7 @@ import requests
 
 from ..config import TOOL_KEYS
 from ..http import now_iso
-from ..model import STATUS_ERROR, STATUS_NO_KEY, ToolReport, Timer
+from ..model import STATUS_ERROR, STATUS_NO_KEY, STATUS_OK, ToolReport, Timer
 
 
 @dataclass
@@ -40,7 +40,7 @@ def new_report(tool: str, label: str, endpoint: str, key_present: bool) -> ToolR
 
 def run_timed(report: ToolReport, func) -> ToolReport:
     """Execute `func()` inside a timer, converting exceptions to an error state."""
-    if report.status == STATUS_NO_KEY:
+    if report.status != STATUS_OK:  # already no_key / skipped by new_report
         return report
     with Timer() as timer:
         try:

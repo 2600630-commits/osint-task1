@@ -8,8 +8,8 @@
     "resolve_error": ""
   },
   "query_window": {
-    "started_at": "2026-11-21T16:49:46Z",
-    "finished_at": "2026-11-21T16:49:46Z"
+    "started_at": "2026-11-21T16:50:54Z",
+    "finished_at": "2026-11-21T16:50:54Z"
   },
   "meta": {
     "mode": "demo (captured fixtures, no live API calls)",
@@ -31,7 +31,7 @@
       "status": "ok",
       "latency_ms": 0,
       "endpoint": "https://www.virustotal.com/api/v3/domains/wikipedia.org",
-      "checked_at": "2026-11-21T16:49:46Z",
+      "checked_at": "2026-11-21T16:50:54Z",
       "metrics": {
         "Verdict": "suspicious",
         "Malicious / engines": "0 / 95",
@@ -96,7 +96,7 @@
       "status": "ok",
       "latency_ms": 0,
       "endpoint": "https://api.securitytrails.com/v1/domain/wikipedia.org",
-      "checked_at": "2026-11-21T16:49:46Z",
+      "checked_at": "2026-11-21T16:50:54Z",
       "metrics": {
         "Verdict": "registered domain",
         "A records": 3,
@@ -199,7 +199,7 @@
       "status": "ok",
       "latency_ms": 0,
       "endpoint": "https://api.abuseipdb.com/api/v2/check?ipAddress=208.80.153.224",
-      "checked_at": "2026-11-21T16:49:46Z",
+      "checked_at": "2026-11-21T16:50:54Z",
       "metrics": {
         "Verdict": "no reports",
         "Abuse confidence": "0%",
@@ -240,7 +240,7 @@
       "status": "ok",
       "latency_ms": 0,
       "endpoint": "https://api.shodan.io/shodan/host/208.80.153.224",
-      "checked_at": "2026-11-21T16:49:46Z",
+      "checked_at": "2026-11-21T16:50:54Z",
       "metrics": {
         "Verdict": "internet-facing host",
         "Open ports": 2,
@@ -288,7 +288,7 @@
       "status": "ok",
       "latency_ms": 0,
       "endpoint": "https://ipinfo.io/208.80.153.224/json",
-      "checked_at": "2026-11-21T16:49:46Z",
+      "checked_at": "2026-11-21T16:50:54Z",
       "metrics": {
         "Verdict": "geolocated",
         "Hostname": "text-lb.codfw.wikimedia.org",

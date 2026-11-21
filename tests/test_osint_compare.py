@@ -136,5 +136,45 @@ class TestToolSubsetAndFailures(unittest.TestCase):
         self.assertFalse(cmp.has_any_data())
 
 
+class TestNotFoundAndSkipPaths(unittest.TestCase):
+    """404s must degrade to an informative row, not an error crash."""
+
+    def test_virustotal_unknown_domain(self):
+        from osint_compare.tools import virustotal
+        from osint_compare.tools._common import ToolContext
+
+        class S404:
+            def get(self, *_a, **_k):
+                from osint_compare.demo import FixtureResponse
+                return FixtureResponse(404, {"error": {"code": "NotFoundError"}})
+
+        report = virustotal.query(ToolContext(S404(), "key"), "unknown.example", None)
+        self.assertEqual(report.status, "ok")
+        self.assertEqual(report.metrics["Verdict"], "not in dataset")
+        self.assertIn("never seen", report.error)
+
+    def test_shodan_unscanned_ip(self):
+        from osint_compare.tools import shodan
+        from osint_compare.tools._common import ToolContext
+
+        class S404:
+            def get(self, *_a, **_k):
+                from osint_compare.demo import FixtureResponse
+                return FixtureResponse(404, {"error": "No information available"})
+
+        report = shodan.query(ToolContext(S404(), "key"), "unknown.example", "203.0.113.9")
+        self.assertEqual(report.status, "ok")
+        self.assertEqual(report.metrics["Verdict"], "not scanned by Shodan")
+
+    def test_ip_tools_skip_unresolved_domains(self):
+        from osint_compare.tools import abuseipdb, shodan
+        from osint_compare.tools._common import ToolContext
+
+        for module in (abuseipdb, shodan):
+            report = module.query(ToolContext(None, "key"), "unknown.example", None)
+            self.assertEqual(report.status, "skipped")
+            self.assertIn("did not resolve", report.error)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
